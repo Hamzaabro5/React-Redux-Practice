@@ -16,7 +16,7 @@ export const todoSlice = createSlice({
             state.todo.splice(action.payload.index , 1)
         },
         editTodo: (state , action) => {
-            const updatedTodo = prompt()
+            const updatedTodo = prompt(`Enter Your Updated Value`)
             state.todo.splice(action.payload.index , 1 ,{content: updatedTodo, id: nanoid()})
         }
     }
